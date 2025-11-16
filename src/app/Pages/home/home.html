@@ -1,0 +1,209 @@
+<header class="navbar" data-aos="fade-down" [class.scrolled]="navShadow" [class.open]="menuOpen">
+  <div class="container nav-wrap">
+    <a class="logo" (click)="scrollTo('hero', $event)" href="#">
+      <img src="Image/logo.png" width="50" height="50" alt="">
+    </a>
+    <nav class="nav-links">
+      <a href="#" (click)="scrollTo('hero', $event)">Home</a>
+      <a href="#" (click)="scrollTo('services', $event)">Services</a>
+      <a href="#" (click)="scrollTo('projects', $event)">Projects</a>
+      <a href="#" (click)="scrollTo('about', $event)">About Us</a>
+    </nav>
+    <button class="nav-burger" type="button" aria-label="Toggle menu" [attr.aria-expanded]="menuOpen" (click)="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="btn btn-primary nav-cta" href="#" (click)="scrollTo('contact', $event)">Hire Experts Now</a>
+  </div>
+  <div class="nav-shadow"></div>
+  <div class="mobile-menu" [class.show]="menuOpen">
+    <a href="#" (click)="scrollTo('hero', $event); closeMenu()">Home</a>
+    <a href="#" (click)="scrollTo('services', $event); closeMenu()">Services</a>
+    <a href="#" (click)="scrollTo('projects', $event); closeMenu()">Projects</a>
+    <a href="#" (click)="scrollTo('about', $event); closeMenu()">About Us</a>
+    <a href="#" class="btn btn-primary" (click)="scrollTo('contact', $event); closeMenu()">Hire Experts Now</a>
+  </div>
+  <div class="nav-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+</header>
+
+<section id="hero" class="hero hero-premium">
+  <div class="hero-media"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-shape"></div>
+  <div class="container">
+    <div class="hero-wrap">
+      <div class="hero-copy" data-aos="fade-right">
+        <div class="pill">Premium Workforce</div>
+        <h1 class="hero-title">We Connect You With Skilled Engineers & Technicians for Any Project</h1>
+        <p class="hero-sub">We deploy certified engineers, technicians, carpenters, welders and craftsmen—fast, safely and professionally managed from request to handover.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" (click)="scrollTo('contact', $event)">Hire Experts Now</a>
+          <a href="#" class="btn btn-outline" (click)="scrollTo('projects', $event)">View Projects</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-badge"><span class="dot"></span>2,500+ Professionals</div>
+          <div class="trust-badge"><span class="dot"></span>24/7 Dispatch</div>
+          <div class="trust-badge"><span class="dot"></span>4.9/5 Client Rating</div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="visual-panel"></div>
+        <div class="stat-card sc-1"><div class="k">2,500+</div><div class="l">Professionals</div></div>
+        <div class="stat-card sc-2"><div class="k">24/7</div><div class="l">Dispatch</div></div>
+        <div class="stat-card sc-3"><div class="k">4.9/5</div><div class="l">Client Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about" data-aos="fade-up">
+  <div class="container about-wrap">
+    <div class="about-left" data-aos="fade-right">
+      <div class="section-head">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-sub">We connect companies with premium, certified talent—engineers, technicians and skilled workers—delivered with professional project management and a safety‑first culture.</p>
+      </div>
+      <ul class="about-bullets">
+        <li><span class="b-ic">✓</span> Certified & vetted workforce</li>
+        <li><span class="b-ic">⚡</span> Fast deployment with 24/7 dispatch</li>
+        <li><span class="b-ic">★</span> Premium workmanship & clean finishes</li>
+        <li><span class="b-ic">📋</span> Managed delivery with clear reporting</li>
+      </ul>
+    </div>
+    <div class="about-media" data-aos="fade-left">
+      <img src="Image/about.png" alt="Engineering team" />
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services" data-aos="fade-up">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Skilled teams matched to your scope and schedule.</p>
+    </div>
+    <div class="cards-grid">
+      <article class="service-card stagger-1" data-aos="fade-up" data-aos-delay="0"><span class="svc-icon">⚙</span><h3>Engineers</h3><p>Design, supervision and commissioning.</p></article>
+      <article class="service-card stagger-2" data-aos="fade-up" data-aos-delay="100"><span class="svc-icon">🛠</span><h3>Technicians</h3><p>HVAC, MEP and multi‑skilled maintenance.</p></article>
+      <article class="service-card stagger-3" data-aos="fade-up" data-aos-delay="200"><span class="svc-icon">🪚</span><h3>Carpenters</h3><p>Structural, drywall and premium finishes.</p></article>
+      <article class="service-card stagger-4" data-aos="fade-up" data-aos-delay="300"><span class="svc-icon">🚰</span><h3>Plumbers</h3><p>Piping, drainage and leak response.</p></article>
+      <article class="service-card stagger-5" data-aos="fade-up" data-aos-delay="400"><span class="svc-icon">🔩</span><h3>Welders</h3><p>Certified welding and fabrication.</p></article>
+      <article class="service-card stagger-6" data-aos="fade-up" data-aos-delay="500"><span class="svc-icon">🏗</span><h3>Construction Workers</h3><p>Civil, masonry and site operations.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Quality in Every Detail</h2>
+      <p class="section-sub">Explore completed and in‑progress projects delivered by our professional technicians and skilled workers. Each case demonstrates premium workmanship, clean finishes and disciplined project management.</p>
+    </div>
+    <div class="projects-grid">
+<a class="project-card" data-aos="zoom-in" data-aos-delay="0" [routerLink]="['/projects','industrial-piping']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/2965260/pexels-photo-2965260.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>Industrial Piping & Welding</h3>
+          <p>New process lines delivered in strict shutdown windows.</p>
+        </div>
+      </a>
+<a class="project-card" data-aos="zoom-in" data-aos-delay="150" [routerLink]="['/projects','residential-finishing']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/3997159/pexels-photo-3997159.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>Premium Residential Finishing</h3>
+          <p>Showroom‑grade interiors across multiple sites.</p>
+        </div>
+      </a>
+<a class="project-card" data-aos="zoom-in" data-aos-delay="300" [routerLink]="['/projects','hvac-electrical-upgrade']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/5854198/pexels-photo-5854198.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>HVAC & Electrical Upgrade</h3>
+          <p>End‑to‑end risers and mechanical replacement.</p>
+        </div>
+      </a>
+<a class="project-card" data-aos="zoom-in" data-aos-delay="450" [routerLink]="['/projects','commercial-fitout']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/3862370/pexels-photo-3862370.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>Commercial Fit‑Out</h3>
+          <p>Electrical, carpentry and finishing in occupied spaces.</p>
+        </div>
+      </a>
+<a class="project-card" data-aos="zoom-in" data-aos-delay="600" [routerLink]="['/projects','facility-maintenance']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/7358698/pexels-photo-7358698.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>Facility Maintenance Program</h3>
+          <p>Multi‑trade preventive and reactive services.</p>
+        </div>
+      </a>
+<a class="project-card" data-aos="zoom-in" data-aos-delay="750" [routerLink]="['/projects','industrial-steelwork']">
+        <div class="project-img" style="background-image:url('https://images.pexels.com/photos/8961067/pexels-photo-8961067.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="project-info">
+          <h3>Industrial Steelwork</h3>
+          <p>Certified structural fabrication and install.</p>
+        </div>
+      </a>
+    </div>
+    <div class="center-row">
+      <a href="#" class="btn btn-outline" (click)="scrollTo('contact', $event)">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section testimonials" data-aos="fade-up">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Client Testimonials</h2>
+      <p class="section-sub">Trusted by facility managers, contractors and asset owners.</p>
+    </div>
+    <div class="testimonials-grid">
+      <article class="t-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="t-head">
+          <div class="avatar" style="background-image:url('https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+          <div class="t-meta"><strong>Alex Johnson</strong><span>Facilities Director</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>Response times are exceptional and delivery is consistently high quality.</p>
+      </article>
+      <article class="t-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="t-head">
+          <div class="avatar" style="background-image:url('https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+          <div class="t-meta"><strong>Maria Lopez</strong><span>Project Lead</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>We scale up and down with confidence. The teams show up prepared and certified.</p>
+      </article>
+      <article class="t-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="t-head">
+          <div class="avatar" style="background-image:url('https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+          <div class="t-meta"><strong>Omar Khalid</strong><span>Operations Manager</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>They understand industrial safety and manage the whole process end‑to‑end.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer" data-aos="fade-up">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <img src="Image/logo.png" width="80" height="80" alt="">
+
+    </div>
+    <div class="f-links">
+      <a href="#" (click)="scrollTo('hero', $event)">Home</a>
+      <a href="#" (click)="scrollTo('services', $event)">Services</a>
+      <a href="#" (click)="scrollTo('projects', $event)">Projects</a>
+      <a href="#" (click)="scrollTo('about', $event)">About Us</a>
+      <a href="#" (click)="scrollTo('contact', $event)">Contact</a>
+    </div>
+    <div class="f-social">
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+  <div class="container f-bottom">
+    <span>© {{ year }} ProTech Workforce. All rights reserved.</span>
+  </div>
+</footer>

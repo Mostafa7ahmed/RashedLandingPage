@@ -1,0 +1,80 @@
+<section class="pd-hero" [ngStyle]="{'background-image': 'url(' + data.hero + ')'}" data-animate>
+  <div class="pd-hero__overlay"></div>
+  <div class="container pd-hero__content">
+    <nav class="pd-breadcrumb">
+      <a [routerLink]="['/home']">Home</a>
+      <span class="sep">›</span>
+      <a [routerLink]="['/home']">Projects</a>
+      <span class="sep">›</span>
+      <span class="current">{{ data.title }}</span>
+    </nav>
+    <h1 class="pd-title">{{ data.title }}</h1>
+    <p class="pd-sub">{{ data.description }}</p>
+  </div>
+  <div class="pd-hero__fade"></div>
+  <button class="pd-back" (click)="goBack()">← Back</button>
+  
+</section>
+
+
+
+<!-- Gallery -->
+<section class="pd-gallery-wrap" data-animate>
+  <div class="container">
+    <h2 class="pd-h2">Image Showcase</h2>
+    <div class="pd-gallery">
+      <div class="pd-shot" *ngFor="let img of data.gallery" [ngStyle]="{'background-image': 'url(' + img + ')'}"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="pd-features" data-animate>
+  <div class="container">
+    <h2 class="pd-h2">Key Features</h2>
+    <div class="feature-grid">
+      <article class="feature-card" *ngFor="let f of data.features">
+        <div class="f-ic">{{ f.icon }}</div>
+        <h4>{{ f.title }}</h4>
+        <p>{{ f.desc }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="pd-tech" data-animate>
+  <div class="container">
+    <h2 class="pd-h2">Tech Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-item" *ngFor="let t of data.technologies">
+        <div class="t-logo">{{ t[0] }}</div>
+        <div class="t-name">{{ t }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="pd-results" data-animate>
+  <div class="container">
+    <h2 class="pd-h2">Results & Impact</h2>
+    <div class="res-grid">
+      <div class="res-card" *ngFor="let r of data.results">
+        <div class="res-value">{{ r.value }}</div>
+        <div class="res-label">{{ r.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pd-cta" data-animate>
+  <div class="container cta-wrap reveal-up">
+    <div class="cta-text">
+      <h3>Do you want to build a similar project?</h3>
+      <p>Let’s turn your idea into a premium product with clean design and robust engineering.</p>
+    </div>
+    <a class="btn btn-primary" [routerLink]="['/home']">Start Your Project</a>
+  </div>
+</section>
